@@ -1,2 +1,3 @@
 rootProject.name = 'java-oop-practice'
 include '01-baseball'
+include '02-racingcar'
