@@ -10,10 +10,12 @@ class CarsTest {
 
     @Test
     void 모든_자동차가_전진() {
-        List<Car> carList = List.of(new Car("pobi"), new Car("woni"));
-        Cars cars = new Cars(carList);
+        List<String> inputNames = List.of("pobi", "woni");
+        Cars cars = new Cars(inputNames);
 
         cars.moveAll(() -> 9);
+
+        List<Car> carList = cars.getCars();
 
         assertThat(carList.get(0).getPosition()).isEqualTo(1);
         assertThat(carList.get(1).getPosition()).isEqualTo(1);
